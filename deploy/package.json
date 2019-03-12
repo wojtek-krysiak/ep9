@@ -12,6 +12,7 @@
   "dependencies": {
     "shipit": "^1.2.0",
     "shipit-cli": "^4.2.0",
-    "shipit-deploy": "^4.1.4"
+    "shipit-deploy": "^4.1.4",
+    "shipit-shared": "^4.4.2"
   }
 }
