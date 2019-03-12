@@ -18,7 +18,7 @@ const User = mongoose.model('User', {
   surname: String,
 })
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello World - updated!'))
 
 app.get('/users', async (req, res) => {
   const users = await User.find({}).limit(10)
