@@ -23,12 +23,11 @@ module.exports = shipit => {
   })
 
   shipit.blTask('server:start', async () => {
-    const currentPath = path.join(shipit.config.deployTo, '/current')
-    await shipit.remote(`cd ${currentPath} && NODE_ENV=production forever start server.js`)
+    await shipit.remote(`cd ${shipit.config.deployTo} && NODE_ENV=production forever start current/server.js`)
   })
 
   shipit.blTask('server:restart', async () => {
-    await shipit.remote(`cd ${shipit.currentPath} && NODE_ENV=production forever restart server.js`)
+    await shipit.remote(`cd ${shipit.config.deployTo} && forever restartall`)
   })
 
   shipit.on('updated', () => {
